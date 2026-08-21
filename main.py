@@ -48,7 +48,7 @@ class GSIHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(b"OK")
 
-def run(server_class=HTTPServer, handler_class=GSIHandler, port=3000):
+def run(server_class=HTTPServer, handler_class=GSIHandler, port=27182):
     server_address = ('127.0.0.1', port)
     httpd = server_class(server_address, handler_class)
     print(f"GSI Server running on port {port}...")
